@@ -4,8 +4,8 @@ $enteredUsername = $_POST['username'];
 $enteredPassword = $_POST['password'];
 
 // Replace with actual username and password stored in a database
-$expectedUsername = "your_username";
-$expectedPassword = "your_password";
+$expectedUsername = "marwan";
+$expectedPassword = "test$4";
 
 // Check if the submitted credentials match the expected credentials
 if ($enteredUsername === $expectedUsername && $enteredPassword === $expectedPassword) {
