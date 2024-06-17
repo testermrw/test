@@ -1,0 +1,46 @@
+.container {
+    position: relative;
+    margin: 0 auto; /* 
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    width: 600px; /* Set the desired width of the slideshow container */
+    height: 400px; /* Set the desired height of the slideshow container */
+}
+
+.container img {
+    border-radius: 10px; /* Adjust the radius value as needed */
+    border: 2px solid black; /* Adjust border width and color as needed */
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.5); /* Horizontal offset, vertical offset, blur radius, color */
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Make the image fill the container horizontally */
+    height: 100%; /* Make the image fill the container vertically */
+    object-fit: cover; /* Maintain aspect ratio while filling the container */
+    opacity: 0;
+    animation: fade 9s infinite; /* Apply fade animation to all slides */
+}
+
+.slide:nth-child(1) {
+    animation-delay: 0s; /* Delay for the first image */
+}
+
+.slide:nth-child(2) {
+    animation-delay: 3s; /* Delay for the second image */
+}
+
+.slide:nth-child(3) {
+    animation-delay: 6s; /* Delay for the third image */
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    33% { opacity: 1; }
+    55% { opacity: 0; }
+    100% { opacity: 0; } /* Fade out */
+}
